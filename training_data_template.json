@@ -1,0 +1,34 @@
+{
+    "_comment": [
+        "Training Data Format Guidelines for TinyLlama Fine-tuning:",
+        "1. Keep instructions clear and specific",
+        "2. Inputs should provide relevant context",
+        "3. Outputs should be structured and concise",
+        "4. Avoid very long responses (max ~500 tokens)",
+        "5. Include diverse scenarios for better generalization",
+        "6. Use consistent formatting within responses",
+        "7. Include system-focused technical tasks"
+    ],
+    "_format_example": {
+        "instruction": "Brief, clear task description or question",
+        "input": "Additional context or specific details",
+        "output": "Structured, clear response with actionable steps"
+    },
+    "_data": [
+        {
+            "instruction": "Configure a new Meraki access point for optimal performance in a classroom.",
+            "input": "Room size is 30x30 feet with 30 student devices connecting simultaneously",
+            "output": "Here's how to configure the Meraki AP:\n\n1. Basic Setup:\n• Mount location: Center ceiling\n• Channel: Auto (DFS enabled)\n• Channel width: 40MHz\n\n2. Performance Settings:\n• Band steering: Enabled\n• Load balancing: Enabled\n• Minimum bitrate: 12 Mbps\n\n3. Access Control:\n• WPA2-Enterprise\n• Client limit: 40\n• VLAN: Student network"
+        },
+        {
+            "instruction": "Set up automated backups for a school's Google Workspace data.",
+            "input": "Need daily backups of Drive, Gmail, and Classroom data for compliance",
+            "output": "Configuration steps for automated backups:\n\n1. Google Vault Setup:\n• Enable retention\n• Set 1-year hold\n• Configure exports\n\n2. Third-party Backup:\n• Daily schedule\n• Incremental backups\n• Secure storage\n\n3. Monitoring:\n• Daily reports\n• Space usage\n• Error alerts"
+        },
+        {
+            "instruction": "Troubleshoot slow network performance on student Chromebooks.",
+            "input": "Multiple students reporting slow loading times and connection drops",
+            "output": "Follow these diagnostic steps:\n\n1. Device Checks:\n• Update Chrome OS\n• Clear browser cache\n• Check extensions\n\n2. Network Tests:\n• Run speed test\n• Check DNS settings\n• Verify proxy config\n\n3. Infrastructure:\n• AP capacity\n• DHCP status\n• QoS settings"
+        }
+    ]
+}
